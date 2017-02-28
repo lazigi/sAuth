@@ -22,6 +22,44 @@ $__sAuth_MySQL_Update =       true;
 >Update function only works with `$__sAuth_MySQL`
 
 <br><br><br>
+#How to use?
+>Cheack if the user is logged in<br>
+`$sAuth['status']`<br>
+Example
+```php
+if($sAuth['status']){echo 'YES';}else{echo 'NO';}
+```
+
+<br>
+>We get information about the user<br>
+`$sAuth - ARRAY`<br>
+Example
+```php
+echo 'login: '.$sAuth['login'].'<br>';
+echo 'SteamID: '.$sAuth['id'].'<br>';
+echo 'Smoll image: '.$sAuth['img'].'<br>';
+echo 'Medium image: '.$sAuth['img_m'].'<br>';
+echo 'Full image: '.$sAuth['img_f'].'<br>';
+echo 'URL: '.$sAuth['url'];
+```
+
+<br>
+>link to login<br>
+`sAuthLogin.php?login`<br>
+Example
+```html
+<a href="/sAuth/sAuthLogin.php?login">login</a>
+```
+
+<br>
+>link to exit<br>
+`sAuthLogin.php?logout`<br>
+Example
+```html
+<a href="/sAuth/sAuthLogin.php?logout">logout</a>
+```
+
+<br><br><br>
 ##Redirects
 After login script redirects here `$__sAuth_LOGIN`<br>
 >Example
@@ -67,44 +105,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 Please check variables for connection database.
 <br><br><br>
-#How to use?
->Cheack if the user is logged in<br>
-`$sAuth['status']`<br>
-Example
-```php
-if($sAuth['status']){echo 'YES';}else{echo 'NO';}
-```
 
-<br>
->We get information about the user<br>
-`$sAuth - ARRAY`<br>
-Example
-```php
-echo 'login: '.$sAuth['login'].'<br>';
-echo 'SteamID: '.$sAuth['id'].'<br>';
-echo 'Smoll image: '.$sAuth['img'].'<br>';
-echo 'Medium image: '.$sAuth['img_m'].'<br>';
-echo 'Full image: '.$sAuth['img_f'].'<br>';
-echo 'URL: '.$sAuth['url'];
-```
-
-<br>
->link to login<br>
-`sAuthLogin.php?logout`<br>
-Example
-```html
-<a href="/sAuth/sAuthLogin.php?login">login</a>
-```
-
-<br>
->link to exit<br>
-`sAuthLogin.php?logout`<br>
-Example
-```html
-<a href="/sAuth/sAuthLogin.php?logout">logout</a>
-```
-
-<br><br><br>
 ###Using library
 For the script required [OpenID](http://openid.net/developers/libraries/) library
 
