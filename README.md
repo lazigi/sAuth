@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 Please check variables for connection database.
 <br><br><br>
-###Ussing library
+###Using library
 For the script required [OpenID](http://openid.net/developers/libraries/) library
 
 
