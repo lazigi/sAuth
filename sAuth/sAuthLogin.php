@@ -17,25 +17,25 @@
   
   ob_start();
   session_start();
-  require('openid.php');
-  require('__sAuthConfig.php');
+  require("openid.php");
+  require("__sAuthConfig.php");
 
   try{
     $openid = new LightOpenID($__sAuth_URL_SITE);
     if(!$openid->mode){
-      if(isset($_GET['login'])){
-        $openid->identity = 'http://steamcommunity.com/openid/?l=english';
-        header('Location: '.$openid->authUrl());
+      if(isset($_GET["login"])){
+        $openid->identity = "http://steamcommunity.com/openid/?l=english";
+        header("Location: ".$openid->authUrl());
       }
     }else{
-      if($openid->mode == 'cancel'){
+      if($openid->mode=="cancel"){
         sAuth_error_print("Steam Fail", "User has canceled authentication!");
       }else{
         if($openid->validate()){
           $id = $openid->identity;
 
-          $ptn = "/^http:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
-          preg_match($ptn, $id, $matches);
+          $reg = "/^http:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
+          preg_match($reg, $id, $matches);
           echo sAuth_error_print("Steam Access", "<center><h2><a href='$__sAuth_LOGIN'>Go to site</a></h2></center>");
 
           $url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=$__sAuth_API&steamids=$matches[1]";
