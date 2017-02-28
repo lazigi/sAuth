@@ -4,7 +4,7 @@ Steam Authorization
 
 ###MySQL Create Table
 
-```julia
+```sql
 CREATE TABLE IF NOT EXISTS users ( 
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   type int(11) NOT NULL,
