@@ -23,17 +23,19 @@ $__sAuth_MySQL_Update =       true;
 
 <br><br><br>
 #How to use?
->Cheack if the user is logged in<br>
+Cheack if the user is logged in<br>
 `$sAuth['status']`<br>
-Example
+
+>Example
 ```php
 if($sAuth['status']){echo 'YES';}else{echo 'NO';}
 ```
 
 <br>
->We get information about the user<br>
+We get information about the user<br>
 `$sAuth - ARRAY`<br>
-Example
+
+>Example
 ```php
 echo 'login: '.$sAuth['login'].'<br>';
 echo 'SteamID: '.$sAuth['id'].'<br>';
@@ -44,17 +46,19 @@ echo 'URL: '.$sAuth['url'];
 ```
 
 <br>
->link to login<br>
+Link to login<br>
 `sAuthLogin.php?login`<br>
-Example
+
+>Example
 ```html
 <a href="/sAuth/sAuthLogin.php?login">login</a>
 ```
 
 <br>
->link to exit<br>
+Link to exit<br>
 `sAuthLogin.php?logout`<br>
-Example
+
+>Example
 ```html
 <a href="/sAuth/sAuthLogin.php?logout">logout</a>
 ```
