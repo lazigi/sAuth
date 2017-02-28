@@ -67,6 +67,13 @@ CREATE TABLE IF NOT EXISTS users (
 
 Please check variables for connection database.
 <br><br><br>
+#How to use?
+>Cheack if the user is logged in
+```php
+
+```
+
+<br><br><br>
 ###Using library
 For the script required [OpenID](http://openid.net/developers/libraries/) library
 
