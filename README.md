@@ -75,6 +75,7 @@ Example
 if($sAuth['status']){echo 'YES';}else{echo 'NO';}
 ```
 
+<br>
 >We get information about the user<br>
 `$sAuth - ARRAY`<br>
 Example
@@ -87,6 +88,7 @@ echo 'Full image: '.$sAuth['img_f'].'<br>';
 echo 'URL: '.$sAuth['url'];
 ```
 
+<br>
 >link to login<br>
 `sAuthLogin.php?logout`<br>
 Example
@@ -94,6 +96,7 @@ Example
 <a href="/sAuth/sAuthLogin.php?login">login</a>
 ```
 
+<br>
 >link to exit<br>
 `sAuthLogin.php?logout`<br>
 Example
