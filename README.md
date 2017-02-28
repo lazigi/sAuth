@@ -37,8 +37,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 ###Ussing lib
 
-###Errors to installation
-If
+###If you encounter an error during installation
 >php_network_getaddresses: getaddrinfo failed: Name or service not known
 ---OR---
 php_network_getaddresses: getaddrinfo failed: Name or service not known
