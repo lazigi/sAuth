@@ -41,8 +41,6 @@ CREATE TABLE IF NOT EXISTS users (
 ```
 <br />
 
-###Ussing lib
-
 ###If you encounter an error during installation
 >php_network_getaddresses: getaddrinfo failed: Name or service not known
 
@@ -59,3 +57,11 @@ CREATE TABLE IF NOT EXISTS users (
 >Access denied for user '`USER_NAME`'@'`SERVER_NAME`' to database '`DB_NAME`'
 
 Please check variables for connection database.
+<br><br><br>
+###Ussing library
+For the script required [OpenID](http://openid.net/developers/libraries/) library
+
+
+
+
+
