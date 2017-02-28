@@ -29,7 +29,7 @@ After login script redirects here `$__sAuth_LOGIN`<br>
 $__sAuth_LOGIN =  "/After_login";
 ```
 
----AND---</br>
+</br>
 After leaving the site redirects the user to the script here `$__sAuth_LOGOUT`
 >Example
 ```php
