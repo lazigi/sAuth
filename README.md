@@ -5,6 +5,7 @@ Steam Authorization
 #MySQL Create Table
 
 CREATE TABLE IF NOT EXISTS `users` (
+
   `id` int(11) NOT NULL,
   `type` int(11) NOT NULL,
   `login` text NOT NULL,
