@@ -69,8 +69,10 @@ Please check variables for connection database.
 <br><br><br>
 #How to use?
 >Cheack if the user is logged in
+`$sAuth['status']`
+Example
 ```php
-
+if($sAuth['status']){echo 'YES';}else{echo 'NO';}
 ```
 
 <br><br><br>
