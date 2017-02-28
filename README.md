@@ -2,16 +2,16 @@
 Steam Authorization
 
 
-##MySQL Create Table
+###MySQL Create Table
 
 ```julia
-CREATE TABLE IF NOT EXISTS users (
-  id int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS users ( 
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   type int(11) NOT NULL,
   login text NOT NULL,
   steamid varchar(70) NOT NULL,
   img text NOT NULL,
   img_m text NOT NULL,
   img_f text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
