@@ -12,12 +12,15 @@ If you are going to use the database, change the value of the variable `$__sAuth
 ```php
 $__sAuth_MySQL =              true;
 ```
+>SQL query to create a table [here](#create-mysql-table)
+
 <br>
 if you need to update user information (a nickname or change the image or url), change the value of the variable `$__sAuth_MySQL_Update` to the true
 ```php
 $__sAuth_MySQL_Update =       true;
 ```
 >Update function only works with `$__sAuth_MySQL`
+
 <br><br>
 ##Create MySQL Table
 ```sql
