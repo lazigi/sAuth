@@ -7,11 +7,17 @@ Steam Authorization
 Open file `__sAuthConfig.php` and change the following variables for its values
 - change `$__SteamAPI` to your API-KEY from http://steamcommunity.com/dev/apikey
 - change `$__URL_SITE` to your domain name.
-
+<br>
 If you are going to use the database, change the value of the variable `$__sAuth_MySQL` to `true`
 ```php
 $__sAuth_MySQL =              true;
 ```
+<br>
+if you need to update user information (a nickname or change the image or url), change the value of the variable `$__sAuth_MySQL_Update` to the true
+```php
+$__sAuth_MySQL_Update =       true;
+```
+>Update function only works with `$__sAuth_MySQL`
 
 ##Create MySQL Table
 ```sql
