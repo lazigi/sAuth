@@ -31,6 +31,12 @@
     
     $__sAuth_LOGIN =  "/example.php";
     $__sAuth_LOGOUT = "/example.php";
+    
+  
+  
+  /*####################################*/ 
+  /*############ END CONFIG ############*/ 
+  /*####################################*/ 
   
   
   
@@ -39,6 +45,20 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  ####################################
+  ####################################
+  #### DONT TOUCH SYSTEM SCRIPT!! ####
+  #### DONT TOUCH SYSTEM SCRIPT!! ####
+  ####################################
+  ####################################
   if($__sAuth_MySQL){
     $__sAuth_MySQL_CONNECT = mysqli_connect($__sAuth_MySQL_SERVER, $__sAuth_MySQL_USER, $__sAuth_MySQL_PASSWORD, $__sAuth_MySQL_DB);
     if(!$__sAuth_MySQL_CONNECT){
