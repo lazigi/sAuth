@@ -6,7 +6,6 @@ Steam Authorization
 ```sql
 CREATE TABLE IF NOT EXISTS users ( 
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  type int(11) NOT NULL,
   login text NOT NULL,
   steamid varchar(70) NOT NULL,
   img text NOT NULL,
