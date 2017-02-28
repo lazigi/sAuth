@@ -24,8 +24,17 @@ $__sAuth_MySQL_Update =       true;
 <br><br><br>
 ##Redirects
 After login script redirects here `$__sAuth_LOGIN`<br>
+>Example
+```php
+$__sAuth_LOGIN =  "/After_login";
+```
+
 ---AND---</br>
 After leaving the site redirects the user to the script here `$__sAuth_LOGOUT`
+>Example
+```php
+$__sAuth_LOGOUT =  "/After_leaving";
+```
 
 <br><br><br>
 ##Create MySQL Table
