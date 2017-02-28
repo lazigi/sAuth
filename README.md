@@ -34,7 +34,6 @@ if($sAuth['status']){echo 'YES';}else{echo 'NO';}
 
 <br>
 We get information about the user<br>
-`$sAuth - ARRAY`<br>
 
 >Example
 ```php
