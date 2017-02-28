@@ -39,11 +39,17 @@ CREATE TABLE IF NOT EXISTS users (
 
 ###If you encounter an error during installation
 >php_network_getaddresses: getaddrinfo failed: Name or service not known
+<br>
 ---OR---
+<br>
 php_network_getaddresses: getaddrinfo failed: Name or service not known
+<br>
 ---OR---
+<br>
 Access denied for user '`USER_NAME`'@'`SERVER_NAME`' (using password: YES)
+<br>
 ---OR---
+<br>
 Access denied for user '`USER_NAME`'@'`SERVER_NAME`' to database '`DB_NAME`'
 
 Please check variables for connection database.
