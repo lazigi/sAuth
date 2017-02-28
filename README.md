@@ -1,5 +1,6 @@
 [![script-version](https://img.shields.io/badge/Version-1.0-blue.svg)]() [![php-version](https://img.shields.io/badge/PHP-=>5.5-lightgrey.svg)]() 
-#SAuth
+
+#sAuth
 Steam Authorization
 
 ##Installation
@@ -7,8 +8,10 @@ Open file `__sAuthConfig.php` and change the following variables for its values
 - change `$__SteamAPI` to your API-KEY from http://steamcommunity.com/dev/apikey
 - change `$__URL_SITE` to your domain name.
 
-If you are going to use the database, change the value of the variable `` to `true`
-- change 
+If you are going to use the database, change the value of the variable `$__sAuth_MySQL` to `true`
+```php
+$__sAuth_MySQL =              true;
+```
 
 ##Create MySQL Table
 ```sql
