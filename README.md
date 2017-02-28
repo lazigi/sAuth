@@ -68,11 +68,37 @@ CREATE TABLE IF NOT EXISTS users (
 Please check variables for connection database.
 <br><br><br>
 #How to use?
->Cheack if the user is logged in
-`$sAuth['status']`
+>Cheack if the user is logged in<br>
+`$sAuth['status']`<br>
 Example
 ```php
 if($sAuth['status']){echo 'YES';}else{echo 'NO';}
+```
+
+>We get information about the user<br>
+`$sAuth - ARRAY`<br>
+Example
+```php
+echo 'login: '.$sAuth['login'].'<br>';
+echo 'SteamID: '.$sAuth['id'].'<br>';
+echo 'Smoll image: '.$sAuth['img'].'<br>';
+echo 'Medium image: '.$sAuth['img_m'].'<br>';
+echo 'Full image: '.$sAuth['img_f'].'<br>';
+echo 'URL: '.$sAuth['url'];
+```
+
+>link to login<br>
+`sAuthLogin.php?logout`<br>
+Example
+```html
+<a href="/sAuth/sAuthLogin.php?login">login</a>
+```
+
+>link to exit<br>
+`sAuthLogin.php?logout`<br>
+Example
+```html
+<a href="/sAuth/sAuthLogin.php?logout">logout</a>
 ```
 
 <br><br><br>
