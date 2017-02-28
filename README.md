@@ -20,6 +20,7 @@ if you need to update user information (a nickname or change the image or url), 
 $__sAuth_MySQL_Update =       true;
 ```
 >Update function only works with `$__sAuth_MySQL`
+
 <br><br><br>
 ##Redirects
 After login script redirects here `$__sAuth_LOGIN`<br>
