@@ -2,7 +2,7 @@
 
 #sAuth
 Steam Authorization
-<br><br>
+<br><br><br>
 ##Installation
 Open file `__sAuthConfig.php` and change the following variables for its values
 - change `$__sAuth_API` to your API-KEY from http://steamcommunity.com/dev/apikey
@@ -20,8 +20,13 @@ if you need to update user information (a nickname or change the image or url), 
 $__sAuth_MySQL_Update =       true;
 ```
 >Update function only works with `$__sAuth_MySQL`
+<br><br><br>
+##Redirects
+After login script redirects here `$__sAuth_LOGIN`<br>
+---AND---</br>
+After leaving the site redirects the user to the script here `$__sAuth_LOGOUT`
 
-<br><br>
+<br><br><br>
 ##Create MySQL Table
 ```sql
 CREATE TABLE IF NOT EXISTS users ( 
