@@ -1,12 +1,16 @@
 [![script-version](https://img.shields.io/badge/Version-1.0-blue.svg)](https://github.com/lazigi/sAuth/) [![php-version](https://img.shields.io/badge/PHP-=>5.5-lightgrey.svg)](https://github.com/lazigi/sAuth/) 
 #sAuth
 Steam Authorization<br>
+[Download](#download)<br>
 [Installation](#installation)<br>
 [How to use](#how-to-use)<br>
 [Redirects](#redirects)<br>
 [Create MySQL Table](#create-mysql-table)<br>
 [Error](#if-you-encounter-an-error-during-installation)<br>
 [Using library](#using-library)
+
+##Download
+[Download last version](https://github.com/lazigi/sAuth/releases)
 
 <br><br><br>
 ##Installation
