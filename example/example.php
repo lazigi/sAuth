@@ -1,4 +1,5 @@
 <?PHP
+
   include('sAuth/sAuth.php');
   
   if($sAuth['status']){
