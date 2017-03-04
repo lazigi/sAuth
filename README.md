@@ -18,11 +18,6 @@ Open file `__sAuthConfig.php` and change the following variables for its values
 - change `$__sAuth_API` to your API-KEY from http://steamcommunity.com/dev/apikey
 - change `$__sAuth_URL_SITE` to your domain name.
 <br>
-
-If you are going to use the database, change the value of the variable `$__sAuth_MySQL` to `true`
-```php
-$__sAuth_MySQL =              true;
-```
 >SQL query to create a table [here](#create-mysql-table)
 
 <br>
