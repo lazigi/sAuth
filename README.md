@@ -27,7 +27,6 @@ if you need to update user information (a nickname or change the image or url), 
 ```php
 $__sAuth_MySQL_Update =       true;
 ```
->Update function only works with `$__sAuth_MySQL`
 
 <br><br><br>
 #How to use?
@@ -45,7 +44,8 @@ We get information about the user<br>
 >Example
 ```php
 echo 'login: '.$sAuth['login'].'<br>';
-echo 'SteamID: '.$sAuth['id'].'<br>';
+echo 'UserID: '.$sAuth['id'].'<br>'; //mysql `id`
+echo 'SteamID: '.$sAuth['steamid'].'<br>';
 echo 'Small image: '.$sAuth['img'].'<br>';
 echo 'Medium image: '.$sAuth['img_m'].'<br>';
 echo 'Full image: '.$sAuth['img_f'].'<br>';
