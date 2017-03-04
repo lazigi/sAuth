@@ -1,6 +1,6 @@
 <?php
   /*############## sAuth ##################
-  ############## Version 1.1 ##############
+  ############## Version 1.2 ##############
   #########################################
   ##### The script written by lazigi ######
   #########################################
@@ -18,29 +18,33 @@
   ob_start();
   session_start();
 
-  $_sAuth_Session = preg_replace("/[^0-9]/", "", $_SESSION['steamid']);
+  $_sAuth_Session = preg_replace("/^[0-9]$/", "", $_SESSION['steamid']);
   
   if($_sAuth_Session!=""){
     
-    require('__sAuthConfig.php');
-
-    $url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=$__sAuth_API&steamids=$_sAuth_Session";
-    $json_object  = file_get_contents($url);
-    $json_decoded = json_decode($json_object, true);
+    require('__sAuthConfig.php');    
     
-    $json = $json_decoded['response']['players'][0];
+    $q = mysqli_query($__sAuth_MySQL_CONNECT, 'SELECT * FROM `users` WHERE `steamid`="'.$_sAuth_Session.'"');
     
-    $sAuth = array(
-      "status"    => true,
-      "id"        => $json['steamid'],
-      "login"     => $json['personaname'],
-      "loginSQL"  => str_replace('"', '&quot;', $json['personaname']),
-      "url"       => $json['profileurl'],
-      "img"       => $json['avatar'],
-      "img_m"     => $json['avatarmedium'],
-      "img_f"     => $json['avatarfull']
-    );
-    
+    if(mysqli_num_rows($q)){
+      $row = mysqli_fetch_array($q);
+      
+      $sAuth = array(
+        "status"    => true,
+        "id"        => $row['id'],
+        "steamid"   => $row['steamid'],
+        "login"     => $row['login'],
+        "loginSQL"  => $row['login'],
+        "url"       => $row['url'],
+        "img"       => $row['img'],
+        "img_m"     => $row['img_m'],
+        "img_f"     => $row['img_f']
+      );
+    }else{
+      $sAuth = array(
+        "status"    => false
+      );
+    }
   }else{
     $sAuth = array(
       "status"    => false
