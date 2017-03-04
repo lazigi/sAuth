@@ -1,6 +1,6 @@
 <?PHP
   /*############## sAuth ##################
-  ############## Version 1.1 ##############
+  ############## Version 1.2 ##############
   #########################################
   ##### The script written by lazigi ######
   #########################################
@@ -44,37 +44,35 @@
           $json = $json_decoded['response']['players'][0];
           
           $_SESSION['steamid'] = $json['steamid'];
+
+          $q = mysqli_query($__sAuth_MySQL_CONNECT, 'SELECT * FROM `users` WHERE `steamid`="'.$json['steamid'].'"');
           
-          if($__sAuth_MySQL){
-            $q = mysqli_query($__sAuth_MySQL_CONNECT, 'SELECT * FROM `users` WHERE `steamid`="'.$json['steamid'].'"');
-            
-            if(mysqli_num_rows($q)==0){
-              mysqli_query($__sAuth_MySQL_CONNECT, 
-                          'INSERT INTO `users` (
-                            `login`,
-                            `steamid`,
-                            `img`,
-                            `img_m`,
-                            `img_f`
-                          )VALUES(
-                            "'.$json['personaname'].'",
-                            "'.$json['steamid'].'",
-                            "'.$json['avatar'].'",
-                            "'.$json['avatarmedium'].'",
-                            "'.$json['avatarfull'].'"
-                          )'
-              );
-            }else{
-              if($__sAuth_MySQL_Update){
-                $row = mysqli_fetch_array($q);
-                
-                if($json['avatar']!=$row['img']){
-                  mysqli_query($__sAuth_MySQL_CONNECT, 'UPDATE `users` SET `img`="'.$json['avatar'].'", `img_m`="'.$json['avatarmedium'].'", `img_f`="'.$json['avatarfull'].'" WHERE `steamid`="'.$row['steamid'].'"');
-                }
-                
-                if($json['personaname']!=$row['login']){
-                  mysqli_query($__sAuth_MySQL_CONNECT, 'UPDATE `users` SET `login`="'.$json['personaname'].'" WHERE `steamid`="'.$row['steamid'].'"');
-                }
+          if(mysqli_num_rows($q)==0){
+            mysqli_query($__sAuth_MySQL_CONNECT, 
+                        'INSERT INTO `users` (
+                          `login`,
+                          `steamid`,
+                          `img`,
+                          `img_m`,
+                          `img_f`
+                        )VALUES(
+                          "'.$json['personaname'].'",
+                          "'.$json['steamid'].'",
+                          "'.$json['avatar'].'",
+                          "'.$json['avatarmedium'].'",
+                          "'.$json['avatarfull'].'"
+                        )'
+            );
+          }else{
+            if($__sAuth_MySQL_Update){
+              $row = mysqli_fetch_array($q);
+              
+              if($json['avatar']!=$row['img']){
+                mysqli_query($__sAuth_MySQL_CONNECT, 'UPDATE `users` SET `img`="'.$json['avatar'].'", `img_m`="'.$json['avatarmedium'].'", `img_f`="'.$json['avatarfull'].'" WHERE `steamid`="'.$row['steamid'].'"');
+              }
+              
+              if($json['personaname']!=$row['login']){
+                mysqli_query($__sAuth_MySQL_CONNECT, 'UPDATE `users` SET `login`="'.$json['personaname'].'" WHERE `steamid`="'.$row['steamid'].'"');
               }
             }
             
@@ -82,7 +80,7 @@
           }
           die(header('Location: '.$__sAuth_LOGIN));
         }else{
-          die(sAuth_error_print("Steam Fail", 'some error'));///FIX
+          die(sAuth_error_print("Steam Fail", 'Timeout'));///FIX
         }
       }
     }
