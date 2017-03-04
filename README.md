@@ -17,7 +17,8 @@ Steam Authorization<br>
 Open file `__sAuthConfig.php` and change the following variables for its values
 - change `$__sAuth_API` to your API-KEY from http://steamcommunity.com/dev/apikey
 - change `$__sAuth_URL_SITE` to your domain name.
-<br>
+
+<br><br>
 
 >SQL query to create a table [here](#create-mysql-table)
 
