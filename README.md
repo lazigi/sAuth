@@ -1,4 +1,4 @@
-[![script-version](https://img.shields.io/badge/Version-1.3-blue.svg)](https://github.com/lazigi/sAuth/) [![php-version](https://img.shields.io/badge/PHP-=>5.5-lightgrey.svg)](https://github.com/lazigi/sAuth/) 
+[![script-version](https://img.shields.io/badge/Version-1.2-blue.svg)](https://github.com/lazigi/sAuth/) [![php-version](https://img.shields.io/badge/PHP-=>5.5-lightgrey.svg)](https://github.com/lazigi/sAuth/) 
 #sAuth
 Steam Authorization<br>
 [Download](#download)<br>
