@@ -1,5 +1,7 @@
 [![script-version](https://img.shields.io/badge/Version-1.2-blue.svg)](https://github.com/lazigi/sAuth/) [![php-version](https://img.shields.io/badge/PHP-=>5.5-lightgrey.svg)](https://github.com/lazigi/sAuth/) 
-#sAuth
+
+<br><br><br>
+<h1>sAuth</h1>
 Steam Authorization<br>
 [Download](#download)<br>
 [Installation](#installation)<br>
@@ -9,11 +11,11 @@ Steam Authorization<br>
 [Error](#if-you-encounter-an-error-during-installation)<br>
 [Using library](#using-library)
 
-##Download
+<h2>Download</h2>
 [Download last version](https://github.com/lazigi/sAuth/releases)
 
 <br><br><br>
-##Installation
+<h3>Installation</h3>
 Open file `__sAuthConfig.php` and change the following variables for its values
 - change `$__sAuth_API` to your API-KEY from http://steamcommunity.com/dev/apikey
 - change `$__sAuth_URL_SITE` to your domain name.
@@ -29,7 +31,7 @@ $__sAuth_MySQL_Update =       true;
 ```
 
 <br><br><br>
-#How to use?
+<h2>How to use?</h2>
 Cheack if the user is logged in<br>
 `$sAuth['status']`<br>
 
@@ -71,7 +73,7 @@ Link to exit<br>
 ```
 
 <br><br><br>
-##Redirects
+<h3>Redirects</h3>
 After login script redirects here `$__sAuth_LOGIN`<br>
 >Example
 ```php
@@ -86,7 +88,7 @@ $__sAuth_LOGOUT =  "/After_leaving";
 ```
 
 <br><br><br>
-##Create MySQL Table
+<h3>Create MySQL Table</h3>
 ```sql
 CREATE TABLE IF NOT EXISTS users ( 
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -100,7 +102,7 @@ CREATE TABLE IF NOT EXISTS users (
 ```
 <br />
 
-###If you encounter an error during installation
+</h4>If you encounter an error during installation</h4>
 >php_network_getaddresses: getaddrinfo failed: Name or service not known
 
 ---OR---
@@ -118,7 +120,7 @@ CREATE TABLE IF NOT EXISTS users (
 Please check variables for connection database.
 <br><br><br>
 
-###Using library
+<h3>Using library</h3>
 For the script required [OpenID](http://openid.net/developers/libraries/) library
 
 
